@@ -8,10 +8,10 @@ Esta API deve seguir o mínimo de práticas RESTful e conter listas, busca, pagi
 ---
 
 Consigo fazer?</br>
-Siga sim! Só precisa saber (ou aprender agora) um pouco sobre as seguintes tecnologias:</br>
+Diga sim! Só precisa saber (ou aprender agora) um pouco sobre as seguintes tecnologias:</br>
 
 - Conceitos de API RESTful</br>
 - Modelagem de dados</br>
 - NodeJS</br>
 - Algum banco de dados, por exemplo, MySQL, SQL Server, MongoDB, etc...</br>
-git</br>
+- git</br>
