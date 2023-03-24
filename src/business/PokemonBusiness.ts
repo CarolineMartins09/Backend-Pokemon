@@ -71,7 +71,8 @@ export class PokemonBusiness {
             const newOffset = page * (Number(offset) - 1)
 
             const resultTypes = await pokemonDatabase.getAllTwoTypes(newType1, newType2, newOffset)
-            if(resultTypes.length > 0){
+
+            if(resultTypes.length == 0){
                 throw new CustomError(400, "Combination not found!");
             }
 
