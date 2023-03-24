@@ -56,4 +56,17 @@ export class PokemonDatabase extends BaseDataBase {
             throw new Error(error.sqlMessage || error.message)
         }
     }
+
+    getAllName = async (name: string) => {
+        try {
+
+            const namePokemon = await PokemonDatabase.connection.raw(`
+                SELECT * FROM ${this.TABLE_NAME} WHERE (Name like "${name}%")
+        `)
+
+            return namePokemon[0]
+        } catch (error: any) {
+            throw new Error(error.sqlMessage || error.message)
+        }
+    }
 }

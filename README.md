@@ -28,7 +28,7 @@ Diga sim! Só precisa saber (ou aprender agora) um pouco sobre as seguintes tecn
 ✅ Buscar Todos Pokemon com paginação. Senão passar offset tem 1 como fixo</br>
 ✅ Busca todos com Type1 com paginação e limite por páginação</br>
 ✅ Busca todos com Type1 e Type2 com paginação e limite por páginação</br>
-
+✅ Buscar pelo nome</br>
 ---
 ## Link Render
 [](---RENDER---)
@@ -39,3 +39,31 @@ Diga sim! Só precisa saber (ou aprender agora) um pouco sobre as seguintes tecn
 [](---LINK AQUI!---)
 
 ---
+
+<h3 align="center">⚙️ Instruções para rodar o projeto:</h3>
+
+> O arquivo *requests.rest*, presente na pasta raiz do projeto, contém todos os endpoints com url do deploy disponível online (Render)
+
+Caso queira rodar o projeto localmente, as instruções são:
+
+```
+git clone https://github.com/CarolineMartins09/Backend-Pokemon.git
+
+npm install -> para instalar as dependências do projeto
+
+criar um arquivo .env com as informações do seus banco de dados
+
+executar as queries do arquivo queries.sql para criar as tabelas
+
+npm run dev -> para rodar o servidor
+Instruções para preencher o arquivo dotenv:
+```
+
+criar um arquivo .env na pasta raiz com as seguintes variáveis:
+
+```
+    DB_HOST: ,
+    DB_USER: ,
+    DB_PASSWORD: ,
+    DB_DATABASE: ,
+```

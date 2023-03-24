@@ -32,9 +32,9 @@ export class PokemonBusiness {
             }
             const newType = type.toLowerCase()
 
-            const result = await pokemonDatabase.getAllByType(newType)
+            const resultByType = await pokemonDatabase.getAllByType(newType)
 
-            return result
+            return resultByType
         } catch (error: any) {
             throw new CustomError(400, error.message);
         }
@@ -70,10 +70,27 @@ export class PokemonBusiness {
 
             const newOffset = page * (Number(offset) - 1)
 
-            const result = await pokemonDatabase.getAllTwoTypes(newType1, newType2, newOffset)
+            const resultTypes = await pokemonDatabase.getAllTwoTypes(newType1, newType2, newOffset)
 
-            return result
+            return resultTypes
 
+        } catch (error: any) {
+            throw new CustomError(400, error.message);
+        }
+    }
+
+    getAllName = async (name: string) => {
+        try {
+            if (!name) {
+                const result = await pokemonDatabase.getAll()
+                return result
+            }
+
+            const newName = name.toLowerCase()
+
+            const resultName = await pokemonDatabase.getAllName(newName)
+
+            return resultName
         } catch (error: any) {
             throw new CustomError(400, error.message);
         }
