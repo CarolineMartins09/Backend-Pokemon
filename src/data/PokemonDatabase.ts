@@ -3,7 +3,7 @@ import BaseDataBase from "./BaseDatabase";
 export class PokemonDatabase extends BaseDataBase {
     protected TABLE_NAME = "Case_pokemon"
 
-    getAll = async (offset:number) => {
+    getAllPage = async (offset: number) => {
         try {
             const result = await PokemonDatabase.connection()
                 .select("*")
@@ -31,10 +31,23 @@ export class PokemonDatabase extends BaseDataBase {
         }
     }
 
-    getAllTwoTypes = async()=>{
-        try{
+    getAllTwoTypes = async () => {
+        try {
 
-        }catch(error:any){
+        } catch (error: any) {
+            throw new Error(error.sqlMessage || error.message)
+        }
+    }
+
+    getAll = async () => {
+        try {
+            const result = await PokemonDatabase.connection()
+                .select("*")
+                .from(this.TABLE_NAME)
+
+            return result
+
+        } catch (error: any) {
             throw new Error(error.sqlMessage || error.message)
         }
     }

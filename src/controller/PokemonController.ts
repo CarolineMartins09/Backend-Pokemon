@@ -5,10 +5,10 @@ const pokemonBusiness = new PokemonBusiness()
 
 export class PokemonController {
 
-    getAll = async (req: Request, res: Response) => {
+    getAllPage = async (req: Request, res: Response) => {
         try {
             const offset = req.body.offset
-            const result = await pokemonBusiness.getAll(offset)
+            const result = await pokemonBusiness.getAllPage(offset)
 
             res.status(200).send(result)
         } catch (error: any) {
@@ -23,6 +23,15 @@ export class PokemonController {
             const result = await pokemonBusiness.getAllByType(type)
             res.status(200).send(result)
         } catch (error: any) {
+            res.status(400).send({ error: error.message });
+        }
+    }
+
+    getAll=async(req:Request,res:Response)=>{
+        try{
+
+
+        }catch(error:any){
             res.status(400).send({ error: error.message });
         }
     }
