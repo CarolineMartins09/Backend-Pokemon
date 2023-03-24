@@ -20,8 +20,8 @@ export class PokemonController {
         try {
             const type = req.body.type
 
-            const result = await pokemonBusiness.getAllByType(type)
-            res.status(200).send(result)
+            const resultByType = await pokemonBusiness.getAllByType(type)
+            res.status(200).send(resultByType)
         } catch (error: any) {
             res.status(400).send({ error: error.message });
         }
@@ -41,10 +41,22 @@ export class PokemonController {
         try {
             const { type1, type2, offset } = req.body
 
-            const result = await pokemonBusiness.getAllTypesPage(type1, type2, offset)
+            const resultTypes = await pokemonBusiness.getAllTypesPage(type1, type2, offset)
 
-            res.status(200).send(result)
+            res.status(200).send(resultTypes)
 
+        } catch (error: any) {
+            res.status(400).send({ error: error.message });
+        }
+    }
+
+    getAllName = async (req: Request, res: Response) => {
+        try {
+            const name = req.body.name;
+
+            const resultName = await pokemonBusiness.getAllName(name);
+
+            res.status(200).send(resultName)
         } catch (error: any) {
             res.status(400).send({ error: error.message });
         }
