@@ -15,3 +15,27 @@ Diga sim! Só precisa saber (ou aprender agora) um pouco sobre as seguintes tecn
 - NodeJS</br>
 - Algum banco de dados, por exemplo, MySQL, SQL Server, MongoDB, etc...</br>
 - git</br>
+
+---
+
+## Migração
+
+<p>Realizado atraves da conversão do arquivo de extensão xlsx  para CSV (valores separados por vírgulas), após foi feito a modelagem do banco de dados para inserir todos os dados por import no MySQL Workbench.</p>
+
+---
+## Endpoints:
+✅ Buscar Todos Pokemon da tabela</br>
+✅ Buscar Todos Pokemon com paginação. Senão passar offset tem 1 como fixo</br>
+✅ Busca todos com Type1 com paginação e limite por páginação</br>
+✅ Busca todos com Type1 e Type2 com paginação e limite por páginação</br>
+
+---
+## Link Render
+[](---RENDER---)
+
+---
+
+### Documentação Postman
+[](---LINK AQUI!---)
+
+---
