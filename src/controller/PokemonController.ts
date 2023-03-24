@@ -7,7 +7,8 @@ export class PokemonController {
 
     getAll = async (req: Request, res: Response) => {
         try {
-            const result = await pokemonBusiness.getAll()
+            const offset = req.body.offset
+            const result = await pokemonBusiness.getAll(offset)
 
             res.status(200).send(result)
         } catch (error: any) {

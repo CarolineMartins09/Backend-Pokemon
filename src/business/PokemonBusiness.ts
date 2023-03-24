@@ -6,10 +6,13 @@ const pokemonDatabase = new PokemonDatabase()
 export class PokemonBusiness {
 
 
-    getAll = async () => {
+    getAll = async (offset:number) => {
         try {
+            const page = 5
 
-            const result = await pokemonDatabase.getAll()
+            const newOffset = page * (Number(offset) - 1)
+
+            const result = await pokemonDatabase.getAll(newOffset)
 
             return result
 
@@ -24,8 +27,7 @@ export class PokemonBusiness {
                 throw new CustomError(400, "Insert type");
             }
             const newType = type.toLowerCase()
-            console.log(newType);
-
+ 
             const result = await pokemonDatabase.getAllByType(newType)
 
             return result

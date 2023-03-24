@@ -1,4 +1,9 @@
-GET http://localhost:3003/poke
+GET http://localhost:3003/page/poke
+Content-Type: application/json
+
+{
+    "offset": 2
+}
 
 ###
 GET http://localhost:3003/type
