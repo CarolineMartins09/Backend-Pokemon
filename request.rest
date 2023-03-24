@@ -14,3 +14,4 @@ Content-Type: application/json
 }
 
 ###
+GET http://localhost:3003/pokemon
