@@ -31,8 +31,19 @@ export class PokemonDatabase extends BaseDataBase {
         }
     }
 
-    getAllTwoTypes = async () => {
+    getAllTwoTypes = async (type1:string, type2:string,offset:number) => {
         try {
+        // const pokemonTypes= await PokemonDatabase.connection.raw(`
+        //     SELECT * FROM ${this.TABLE_NAME} WHERE type_1 = "${type1}" AND type_2 = "${type2}" 
+        //      ${offset} LIMIT 10
+        // `)
+        const pokemonTypes= await PokemonDatabase.connection()
+        .select("*")
+        .from(this.TABLE_NAME)
+        .where({type_1: type1, type_2: type2})
+        .offset(offset)
+        .limit(10)
+        return pokemonTypes
 
         } catch (error: any) {
             throw new Error(error.sqlMessage || error.message)

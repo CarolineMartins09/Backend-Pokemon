@@ -11,3 +11,5 @@ pokemonRouter.get("/pokemon",pokemonController.getAll)
 pokemonRouter.get("/poke", pokemonController.getAllPage)
 
 pokemonRouter.get("/type", pokemonController.getAllType)
+
+pokemonRouter.get("/poke/types", pokemonController.getAllTypePage)

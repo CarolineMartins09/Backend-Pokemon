@@ -15,3 +15,14 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3003/pokemon
+
+###
+
+GET http://localhost:3003/page/poke/types
+Content-Type: application/json
+
+{
+    "type1":"BUG",
+    "type2":"Poison",
+    "offset": 2
+}
