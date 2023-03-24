@@ -8,7 +8,7 @@ export class PokemonBusiness {
 
     getAllPage = async (offset: number) => {
         try {
-            if(!offset){
+            if (!offset) {
                 offset = 1
             }
 
@@ -50,15 +50,15 @@ export class PokemonBusiness {
         }
     }
 
-    getAllTypesPage = async (type1:string, type2: string ,offset: number) => {
+    getAllTypesPage = async (type1: string, type2: string, offset: number) => {
         try {
-            if(!offset){
+            if (!offset) {
                 offset = 1
             }
-            if(!type1){
+            if (!type1) {
                 type1 = ""
             }
-            if(!type2){
+            if (!type2) {
                 type2 = ""
             }
 
@@ -70,7 +70,7 @@ export class PokemonBusiness {
 
             const newOffset = page * (Number(offset) - 1)
 
-            const result = await pokemonDatabase.getAllTwoTypes(newType1,newType2,newOffset)
+            const result = await pokemonDatabase.getAllTwoTypes(newType1, newType2, newOffset)
 
             return result
 

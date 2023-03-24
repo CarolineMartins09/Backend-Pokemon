@@ -37,15 +37,15 @@ export class PokemonController {
         }
     }
 
-    getAllTypePage = async (req:Request, res:Response) => {
-        try{
-        const {type1, type2,offset} = req.body
+    getAllTypePage = async (req: Request, res: Response) => {
+        try {
+            const { type1, type2, offset } = req.body
 
-        const result = await pokemonBusiness.getAllTypesPage(type1, type2, offset)
+            const result = await pokemonBusiness.getAllTypesPage(type1, type2, offset)
 
-        res.status(200).send(result)
+            res.status(200).send(result)
 
-        }catch(error:any){
+        } catch (error: any) {
             res.status(400).send({ error: error.message });
         }
     }
