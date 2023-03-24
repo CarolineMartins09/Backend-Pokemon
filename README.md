@@ -36,7 +36,7 @@ Diga sim! Só precisa saber (ou aprender agora) um pouco sobre as seguintes tecn
 ---
 
 ### Documentação Postman
-[](---LINK AQUI!---)
+[https://documenter.getpostman.com/view/25513685/2s93RNxaEu](---LINK AQUI!---)
 
 ---
 
