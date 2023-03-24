@@ -1,1 +1,9 @@
 GET http://localhost:3003/poke
+
+###
+GET http://localhost:3003/type
+Content-Type: application/json
+
+{
+    "type":"POISON"
+}

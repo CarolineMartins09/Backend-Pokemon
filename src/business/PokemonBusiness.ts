@@ -17,4 +17,20 @@ export class PokemonBusiness {
             throw new CustomError(400, error.message);
         }
     }
+
+    getAllByType = async (type: string) => {
+        try {
+            if (!type) {
+                throw new CustomError(400, "Insert type");
+            }
+            const newType = type.toLowerCase()
+            console.log(newType);
+
+            const result = await pokemonDatabase.getAllByType(newType)
+
+            return result
+        } catch (error: any) {
+            throw new CustomError(400, error.message);
+        }
+    }
 }
