@@ -23,20 +23,22 @@ Diga sim! Só precisa saber (ou aprender agora) um pouco sobre as seguintes tecn
 <p>Realizado atraves da conversão do arquivo de extensão xlsx  para CSV (valores separados por vírgulas), após foi feito a modelagem do banco de dados para inserir todos os dados por import no MySQL Workbench.</p>
 
 ---
-## Endpoints:
+## Endpoints:</br>
+
 ✅ Buscar Todos Pokemon da tabela</br>
 ✅ Buscar Todos Pokemon com paginação. Senão passar offset tem 1 como fixo</br>
 ✅ Busca todos com Type1 com paginação e limite por páginação</br>
 ✅ Busca todos com Type1 e Type2 com paginação e limite por páginação</br>
 ✅ Buscar pelo nome</br>
+
 ---
 ## Link Render
-[https://case-backend.onrender.com](---RENDER---)
+[---RENDER---](https://case-backend.onrender.com)
 
 ---
 
 ### Documentação Postman
-[https://documenter.getpostman.com/view/25513685/2s93RNxaEu](---LINK AQUI!---)
+[---DOCUMENTAÇÃO---](https://documenter.getpostman.com/view/25513685/2s93RNxaEu)
 
 ---
 
